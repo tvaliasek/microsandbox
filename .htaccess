@@ -1,0 +1,4 @@
+RewriteEngine on
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^(.*)$ http://www.parkovani-brno-centrum.cz/ [R=301,L]
+RewriteRule ^(.*)$ /www/$1 [L,NE]

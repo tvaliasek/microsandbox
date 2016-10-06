@@ -1,0 +1,18 @@
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+
+session:
+	expiration: 2 days
+
+
+services:
+	- App\Model\Web(%version%, %siteName%, %pages%)
+	- App\RouterFactory(%pages%)
+	router: @App\RouterFactory::createRouter
+
+latte:
+	macros:
+		- \Tvaliasek\IconMacros\IconMacro
