@@ -14,7 +14,16 @@ $configurator->createRobotLoader()
 	->addDirectory(__DIR__)
 	->register();
 
-$configurator->addConfig(__DIR__ . '/config/config.database.neon');
+if(file_exists(__DIR__.'/config/config.database.neon')){
+    $configurator->addConfig(__DIR__ . '/config/config.database.neon');
+}
+
+if(is_dir(__DIR__.'/components')){
+    foreach(\Nette\Utils\Finder::findFiles('*config.neon')->from(__DIR__.'/components') as $path=>$splInfo){
+        $configurator->addConfig($path);
+    }
+}
+    
 $configurator->addConfig(__DIR__ . '/config/config.neon');
 $configurator->addConfig(__DIR__ . '/config/pages.neon');
 

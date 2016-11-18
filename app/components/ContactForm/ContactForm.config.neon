@@ -1,0 +1,14 @@
+parameters:
+	contact:
+		saveTo: \App\Components\ContactForm::SAVE_TO_FILE
+		saveTarget: '/../../../log/contactForm'
+		mailFrom : 'admin@cmcode.cz'
+		subject : 'Odeslán kontaktní formulář'
+		sendTo : 'admin@cmcode.cz'
+		emailTemplate: '/emailTemplate.latte'
+		bootstrapRender: true
+		submitText: 'Odeslat'
+		submitOnClick: null
+
+services:
+	- App\Components\IContactFormFactory(%contact.saveTo%, %contact.saveTarget%, %contact.mailFrom%, %contact.subject%, %contact.sendTo%, %contact.emailTemplate%, %contact.bootstrapRender%, %contact.submitText%, %contact.submitOnClick%)
