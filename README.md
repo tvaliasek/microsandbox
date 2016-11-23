@@ -64,8 +64,8 @@ At this time, there are only one component - contact form, which allows saving o
 ##pages.neon explanation
 
     parameters:
-	version: '20160916'
-	siteName: 'Micropage Sandbox'
+	version: '20160916' #string which identificate version of assets
+	siteName: 'Micropage Sandbox' #site name passed to templates
 	pages: {
 		1: { #key is id of page
 			'slug': 'test-page', #url slug
@@ -75,7 +75,7 @@ At this time, there are only one component - contact form, which allows saving o
 			'menuItem': 'Link to test page', #Text of link in navigation, can be null etc, if page is not in nav
 			'navigation': 'main', #identification of navigation, can be null
 			'menuOrder': 1, #order in navigation from low to high
-			'customParams': { #any variable name: any value(service, etc)  
+			'customParams': { #any variable name: any value(service, etc), will be automatically passed to template  
 				'sampleCustomParameter': 'This is my content :)',
 				'anotherParameter': 'Any content can be passed'
 			}
