@@ -1,2 +1,6 @@
 /nbproject/
 /node_modules/
+/vendor/
+/log/
+/temp/
+/.sass-cache/

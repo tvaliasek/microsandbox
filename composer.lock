@@ -4,46 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7421d2a0b6b9b973c8ac52b744465613",
-    "content-hash": "29fc9e960d4021af5798759f4221b3fe",
+    "hash": "88bf2d2a13aa92b6163251076f8ed170",
+    "content-hash": "18c0bf756726ad0704e776098c767688",
     "packages": [
-        {
-            "name": "enshrined/svg-sanitize",
-            "version": "0.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/darylldoyle/svg-sanitizer.git",
-                "reference": "1ed02bbaa0ca85408bdfce1f5268fb4e5efad74b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/darylldoyle/svg-sanitizer/zipball/1ed02bbaa0ca85408bdfce1f5268fb4e5efad74b",
-                "reference": "1ed02bbaa0ca85408bdfce1f5268fb4e5efad74b",
-                "shasum": ""
-            },
-            "require-dev": {
-                "codeclimate/php-test-reporter": "^0.1.2",
-                "phpunit/phpunit": "^4.7"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "enshrined\\svgSanitize\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Daryll Doyle",
-                    "email": "daryll@enshrined.co.uk"
-                }
-            ],
-            "description": "An SVG sanitizer for PHP",
-            "time": "2016-02-27 10:31:04"
-        },
         {
             "name": "instante/bootstrap-3-renderer",
             "version": "2.0.0-alpha",
@@ -400,16 +363,16 @@
         },
         {
             "name": "nette/caching",
-            "version": "v2.5.1",
+            "version": "v2.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/caching.git",
-                "reference": "da827a7f4704cf99abcba2973496d4f2c623b32f"
+                "reference": "7da6cc65f301e220acba4fd8a11d3afdc642be9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/caching/zipball/da827a7f4704cf99abcba2973496d4f2c623b32f",
-                "reference": "da827a7f4704cf99abcba2973496d4f2c623b32f",
+                "url": "https://api.github.com/repos/nette/caching/zipball/7da6cc65f301e220acba4fd8a11d3afdc642be9e",
+                "reference": "7da6cc65f301e220acba4fd8a11d3afdc642be9e",
                 "shasum": ""
             },
             "require": {
@@ -458,7 +421,7 @@
             ],
             "description": "Nette Caching Component",
             "homepage": "https://nette.org",
-            "time": "2016-07-21 12:11:37"
+            "time": "2016-10-06 00:08:42"
         },
         {
             "name": "nette/component-model",
@@ -519,16 +482,16 @@
         },
         {
             "name": "nette/database",
-            "version": "v2.4.0",
+            "version": "v2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/database.git",
-                "reference": "05aa9112f3da7cf0ef799ad6b0fe223485deb827"
+                "reference": "7a7b51520f3d98e3f6c38df5495ac775463972d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/database/zipball/05aa9112f3da7cf0ef799ad6b0fe223485deb827",
-                "reference": "05aa9112f3da7cf0ef799ad6b0fe223485deb827",
+                "url": "https://api.github.com/repos/nette/database/zipball/7a7b51520f3d98e3f6c38df5495ac775463972d5",
+                "reference": "7a7b51520f3d98e3f6c38df5495ac775463972d5",
                 "shasum": ""
             },
             "require": {
@@ -575,20 +538,20 @@
             ],
             "description": "Nette Database Component",
             "homepage": "https://nette.org",
-            "time": "2016-06-28 11:37:57"
+            "time": "2016-10-18 13:27:34"
         },
         {
             "name": "nette/di",
-            "version": "v2.4.3",
+            "version": "v2.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/di.git",
-                "reference": "aa40af0766b990fbe052d6efe89382d6df2ae641"
+                "reference": "54dbce99e3355e201607874bdbcde8a0b8a1e98e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/di/zipball/aa40af0766b990fbe052d6efe89382d6df2ae641",
-                "reference": "aa40af0766b990fbe052d6efe89382d6df2ae641",
+                "url": "https://api.github.com/repos/nette/di/zipball/54dbce99e3355e201607874bdbcde8a0b8a1e98e",
+                "reference": "54dbce99e3355e201607874bdbcde8a0b8a1e98e",
                 "shasum": ""
             },
             "require": {
@@ -635,7 +598,7 @@
             ],
             "description": "Nette Dependency Injection Component",
             "homepage": "https://nette.org",
-            "time": "2016-09-21 16:51:11"
+            "time": "2016-10-26 16:05:47"
         },
         {
             "name": "nette/finder",
@@ -755,16 +718,16 @@
         },
         {
             "name": "nette/http",
-            "version": "v2.4.1",
+            "version": "v2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/http.git",
-                "reference": "313a0b7a1a702af1652ff5cc279741ff1228a15f"
+                "reference": "8b0d3618b3948446b182f35309b8551c0574ae3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/http/zipball/313a0b7a1a702af1652ff5cc279741ff1228a15f",
-                "reference": "313a0b7a1a702af1652ff5cc279741ff1228a15f",
+                "url": "https://api.github.com/repos/nette/http/zipball/8b0d3618b3948446b182f35309b8551c0574ae3b",
+                "reference": "8b0d3618b3948446b182f35309b8551c0574ae3b",
                 "shasum": ""
             },
             "require": {
@@ -811,7 +774,7 @@
             ],
             "description": "Nette HTTP Component",
             "homepage": "https://nette.org",
-            "time": "2016-09-27 09:54:17"
+            "time": "2016-10-17 14:02:57"
         },
         {
             "name": "nette/mail",
@@ -1044,19 +1007,20 @@
         },
         {
             "name": "nette/robot-loader",
-            "version": "v2.4.0",
+            "version": "v2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/robot-loader.git",
-                "reference": "e5c86ce8b53c7d4be84244624c67485ee4c92dbc"
+                "reference": "980d7c5f20f4792d0be49285c7b2ffde8c8d9fe5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/robot-loader/zipball/e5c86ce8b53c7d4be84244624c67485ee4c92dbc",
-                "reference": "e5c86ce8b53c7d4be84244624c67485ee4c92dbc",
+                "url": "https://api.github.com/repos/nette/robot-loader/zipball/980d7c5f20f4792d0be49285c7b2ffde8c8d9fe5",
+                "reference": "980d7c5f20f4792d0be49285c7b2ffde8c8d9fe5",
                 "shasum": ""
             },
             "require": {
+                "ext-tokenizer": "*",
                 "nette/caching": "~2.2",
                 "nette/finder": "~2.3",
                 "nette/utils": "~2.4",
@@ -1098,7 +1062,7 @@
             ],
             "description": "Nette RobotLoader: comfortable autoloading",
             "homepage": "https://nette.org",
-            "time": "2016-05-17 15:49:40"
+            "time": "2016-09-29 15:55:27"
         },
         {
             "name": "nette/safe-stream",
@@ -1337,44 +1301,6 @@
                 "nette"
             ],
             "time": "2016-09-30 14:17:54"
-        },
-        {
-            "name": "tvaliasek/iconmacros",
-            "version": "1.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tvaliasek/iconmacros.git",
-                "reference": "10917d49858ab4e0b89a62df44206fe790e18101"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tvaliasek/iconmacros/zipball/10917d49858ab4e0b89a62df44206fe790e18101",
-                "reference": "10917d49858ab4e0b89a62df44206fe790e18101",
-                "shasum": ""
-            },
-            "require": {
-                "enshrined/svg-sanitize": "^0.3.0",
-                "nette/finder": ">=2.2",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Tvaliasek\\IconMacros\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "icon latte macro for embedding svg icons into latte templates",
-            "keywords": [
-                "icon",
-                "macro",
-                "nette",
-                "svg"
-            ],
-            "time": "2016-10-06 20:40:05"
         }
     ],
     "packages-dev": [

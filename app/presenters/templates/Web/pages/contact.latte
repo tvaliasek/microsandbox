@@ -1,0 +1,27 @@
+{block title}{$pageData['title']}{/block}
+{block desc}{$pageData['desc']}{/block}
+
+{block content}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>{$pageData['title']}</h1>
+            <hr/>
+            <p>some content lipsum etc :)</p>
+        </div>
+    </div>
+        
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                    <h3>Contact form component</h3>
+                    <p>This form saves submission in log file or database and sends email with data to filled adress.</p>
+                    <hr/>
+                    {control someContactForm}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

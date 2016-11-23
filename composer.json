@@ -20,7 +20,6 @@
 		"nette/utils": "^2.4",
 		"latte/latte": "^2.4",
 		"tracy/tracy": "^2.4",
-		"tvaliasek/iconmacros": "^1.0",
 		"instante/bootstrap-3-renderer": "2.0.0-alpha"
 	},
 	"require-dev": {

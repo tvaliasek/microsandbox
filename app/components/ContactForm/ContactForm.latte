@@ -1,19 +1,7 @@
-<div class="contact-form-component">
-    {form contactControlForm}
-        {if $form->hasErrors()}
-            <p class="contact-form-component-error alert alert-danger" n:foreach="$form->getErrors() as $error">{$error}</p>
-        {/if}
-        {var $container = $form}
-        {block components}
-            {foreach $container->getComponents() as $component}
-                {if $component instanceof \Nette\Forms\Container}
-                    <fieldset>
-                        {include #components, 'container'=>$component}
-                    </fieldset>
-                {else}
-                    {pair $component}
-                {/if}
-            {/foreach}
-        {/block}
-    {/form}
+<div class="contact-form-component" n:snippet="snpcContactForm">
+    {ifset $message}
+        <p class="text-center alert alert-warning">{$message}</p>
+    {else}
+        {control contactControlForm}
+    {/ifset}
 </div>

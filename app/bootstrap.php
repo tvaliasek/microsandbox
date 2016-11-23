@@ -5,6 +5,14 @@ require __DIR__ . '/../vendor/autoload.php';
 $configurator = new Nette\Configurator;
 
 $configurator->setDebugMode(false); // enable for your remote IP
+
+if(!is_dir(__DIR__ . '/../log')){
+    mkdir(__DIR__ . '/../log', 0750);
+}
+if(!is_dir(__DIR__ . '/../temp')){
+    mkdir(__DIR__ . '/../temp', 0750);
+}
+
 $configurator->enableDebugger(__DIR__ . '/../log');
 
 $configurator->setTimeZone('Europe/Prague');

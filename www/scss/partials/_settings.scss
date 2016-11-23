@@ -1,66 +1,8 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
+/* place for sass settings :) write your own */
 
-//colors
-$black: #000000;
-$white: #ffffff;
 
-$red: #BC0B26;
-$orange: #FF7000;
-$lightGray: #F1F1F1;
-$fontGray: #474940;
-$gray: #8D8B8D;
-$darkGray: #484549;
 
-//fonts
-$baseFont: "Exo 2", Helvetica, Arial, sans-serif;
-$baseFontLoaded: "Exo 2", Helvetica, Arial, sans-serif;
-$baseFontSize: 16px;
 
-//vars
-$transEaseIn: 120ms ease-in 0s;
-$transEaseOut: 120ms ease-out 0s;
-$transEaseInShort: 60ms ease-in 0s;
-$transEaseOutShort: 60ms ease-out 0s;
-
-//breakpoints
-$xxxlg: 1800px;
-$xxlg: 1440px;
-$xlg: 1366px;
-$lg: 1200px;
-$md: 1060px;
-$sm: 698px;
-$xs: 626px;
-$xxs: 365px;
-
-//sizes
-$contentPadding: 15px;
-
-//mixins
-@mixin itemShadow{ box-shadow: 0px 2px 3px 0px rgba($black, 0.25); }
-@mixin itemShadowUpper{ box-shadow: 0px 2px 4px 2px rgba($black, 0.20); }
-@mixin itemShadowLower{ box-shadow: 0px 1px 2px 0px rgba($black, 0.30); }
-
-@mixin tinyRadius{@include border-radius(2px);}
-@mixin colorizeSvg($color){
-    svg{
-        circle, ellipse, line, polygon, polyline, rect, path{
-            fill: $color;
-        }
-    }
-}
-
-@mixin colorizeSvgTransition($color, $transition){
-    svg{
-        circle, ellipse, line, polygon, polyline, rect, path{
-            fill: $color;
-            @include transition(fill $transition);
-        }
-    }
-}
 
 @mixin generateVOffsets($howMany){
     @for $i from 1 through $howMany{
