@@ -95,19 +95,20 @@ class Web extends Nette\Object {
         return [];
     }
 
-    /**
+     /**
      * Get array of thumb=>image in gallery folder
      * Scans folder for jpegs
+     * @param string $subfolder
      * @return array
      */
-    public static function getGalleryImages() {
-        $images = \Nette\Utils\Finder::findFiles('*.jpg')->from(__DIR__ . self::GALLERY_PATH . 'thumbs/');
+    public static function getGalleryImages($subfolder = null) {
+        $images = \Nette\Utils\Finder::findFiles('*.jpg')->from(__DIR__ . self::GALLERY_PATH .(($subfolder!==null) ? ($subfolder.'/') : ''). 'thumbs/');
         $result = [];
         if (!empty($images)) {
             foreach ($images as $spl) {
                 $filename = $spl->getBasename();
-                if (file_exists(__DIR__ . self::GALLERY_PATH . $filename)) {
-                    $result[self::GALLERY_URI . 'thumbs/' . $filename] = self::GALLERY_URI . $filename;
+                if (file_exists(__DIR__ . self::GALLERY_PATH.(($subfolder!==null) ? ($subfolder.'/') : '') . $filename)) {
+                    $result[self::GALLERY_URI .(($subfolder!==null) ? ($subfolder.'/') : ''). 'thumbs/' . $filename] = self::GALLERY_URI.(($subfolder!==null) ? ($subfolder.'/') : '') . $filename;
                 }
             }
         }
