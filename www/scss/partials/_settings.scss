@@ -1,8 +1,7 @@
 /* place for sass settings :) write your own */
 
-
-
-
+$white: #ffffff;
+$black: #000000;
 
 @mixin generateVOffsets($howMany){
     @for $i from 1 through $howMany{
@@ -23,3 +22,22 @@
         background-size: #{$size};
     }
 }
+
+//vars
+$transEaseIn: 120ms ease-in 0s;
+$transEaseOut: 120ms ease-out 0s;
+$transEaseInShort: 60ms ease-in 0s;
+$transEaseOutShort: 60ms ease-out 0s;
+
+//breakpoints
+$xxlg: 1440px;
+$xlg: 1366px;
+$lg: 1200px;
+$md: 992px;
+$sm: 768px;
+$xs: 480px;
+
+//mixins
+@mixin itemShadow{ box-shadow: 0px 2px 3px 0px rgba($black, 0.25); }
+@mixin itemShadowUpper{ box-shadow: 0px 2px 4px 2px rgba($black, 0.20); }
+@mixin itemShadowLower{ box-shadow: 0px 1px 2px 0px rgba($black, 0.30); }

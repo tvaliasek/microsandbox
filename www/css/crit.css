@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /* place for sass settings :) write your own */
 /*!
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -181,7 +181,7 @@ a { color: #337ab7; text-decoration: none; }
 /* line 52, ../scss/libs/bootstrap/bootstrap/_scaffolding.scss */
 a:hover, a:focus { color: #23527c; text-decoration: underline; }
 /* line 58, ../scss/libs/bootstrap/bootstrap/_scaffolding.scss */
-a:focus { outline: thin dotted; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px; }
+a:focus { outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px; }
 
 /* line 69, ../scss/libs/bootstrap/bootstrap/_scaffolding.scss */
 figure { margin: 0; }
@@ -1045,7 +1045,7 @@ input[type="range"] { display: block; width: 100%; }
 select[multiple], select[size] { height: auto; }
 
 /* line 76, ../scss/libs/bootstrap/bootstrap/_forms.scss */
-input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus { outline: thin dotted; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px; }
+input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus { outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px; }
 
 /* line 83, ../scss/libs/bootstrap/bootstrap/_forms.scss */
 output { display: block; padding-top: 7px; font-size: 14px; line-height: 1.42857; color: #555555; }
@@ -1249,7 +1249,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
 /* line 9, ../scss/libs/bootstrap/bootstrap/_buttons.scss */
 .btn { display: inline-block; margin-bottom: 0; font-weight: normal; text-align: center; vertical-align: middle; touch-action: manipulation; cursor: pointer; background-image: none; border: 1px solid transparent; white-space: nowrap; padding: 6px 12px; font-size: 14px; line-height: 1.42857; border-radius: 4px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 /* line 26, ../scss/libs/bootstrap/bootstrap/_buttons.scss */
-.btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus { outline: thin dotted; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px; }
+.btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus { outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px; }
 /* line 32, ../scss/libs/bootstrap/bootstrap/_buttons.scss */
 .btn:hover, .btn:focus, .btn.focus { color: #333; text-decoration: none; }
 /* line 39, ../scss/libs/bootstrap/bootstrap/_buttons.scss */
@@ -2876,81 +2876,81 @@ body *:after, body *:before { box-sizing: border-box; }
 /* line 18, ../scss/partials/_layout.scss */
 .main-header, .main-main, .main-footer { display: block; width: 100%; }
 /* line 23, ../scss/partials/_layout.scss */
-.main-main { -webkit-flex-grow: 1; flex-grow: 1; }
-/* line 27, ../scss/partials/_layout.scss */
+.main-main { -webkit-flex-grow: 1; flex-grow: 1; padding-bottom: 2em; }
+/* line 28, ../scss/partials/_layout.scss */
 .main-footer { -webkit-align-self: flex-end; align-self: flex-end; }
 
-/* line 32, ../scss/partials/_layout.scss */
+/* line 33, ../scss/partials/_layout.scss */
 #flashContainer { display: none !important; }
 
-/* line 9, ../scss/partials/_settings.scss */
+/* line 8, ../scss/partials/_settings.scss */
 .v-offset-top-1 { margin-top: 1em; }
 
-/* line 10, ../scss/partials/_settings.scss */
+/* line 9, ../scss/partials/_settings.scss */
 .v-offset-bottom-1 { margin-bottom: 1em; }
 
-/* line 9, ../scss/partials/_settings.scss */
+/* line 8, ../scss/partials/_settings.scss */
 .v-offset-top-2 { margin-top: 2em; }
 
-/* line 10, ../scss/partials/_settings.scss */
+/* line 9, ../scss/partials/_settings.scss */
 .v-offset-bottom-2 { margin-bottom: 2em; }
 
-/* line 9, ../scss/partials/_settings.scss */
+/* line 8, ../scss/partials/_settings.scss */
 .v-offset-top-3 { margin-top: 3em; }
 
-/* line 10, ../scss/partials/_settings.scss */
+/* line 9, ../scss/partials/_settings.scss */
 .v-offset-bottom-3 { margin-bottom: 3em; }
 
-/* line 9, ../scss/partials/_settings.scss */
+/* line 8, ../scss/partials/_settings.scss */
 .v-offset-top-4 { margin-top: 4em; }
 
-/* line 10, ../scss/partials/_settings.scss */
+/* line 9, ../scss/partials/_settings.scss */
 .v-offset-bottom-4 { margin-bottom: 4em; }
 
-/* line 9, ../scss/partials/_settings.scss */
+/* line 8, ../scss/partials/_settings.scss */
 .v-offset-top-5 { margin-top: 5em; }
 
-/* line 10, ../scss/partials/_settings.scss */
+/* line 9, ../scss/partials/_settings.scss */
 .v-offset-bottom-5 { margin-bottom: 5em; }
 
-/* line 9, ../scss/partials/_settings.scss */
+/* line 8, ../scss/partials/_settings.scss */
 .v-offset-top-6 { margin-top: 6em; }
 
-/* line 10, ../scss/partials/_settings.scss */
+/* line 9, ../scss/partials/_settings.scss */
 .v-offset-bottom-6 { margin-bottom: 6em; }
 
-/* line 9, ../scss/partials/_settings.scss */
+/* line 8, ../scss/partials/_settings.scss */
 .v-offset-top-7 { margin-top: 7em; }
 
-/* line 10, ../scss/partials/_settings.scss */
+/* line 9, ../scss/partials/_settings.scss */
 .v-offset-bottom-7 { margin-bottom: 7em; }
 
-/* line 9, ../scss/partials/_settings.scss */
+/* line 8, ../scss/partials/_settings.scss */
 .v-offset-top-8 { margin-top: 8em; }
 
-/* line 10, ../scss/partials/_settings.scss */
+/* line 9, ../scss/partials/_settings.scss */
 .v-offset-bottom-8 { margin-bottom: 8em; }
 
-/* line 9, ../scss/partials/_settings.scss */
+/* line 8, ../scss/partials/_settings.scss */
 .v-offset-top-9 { margin-top: 9em; }
 
-/* line 10, ../scss/partials/_settings.scss */
+/* line 9, ../scss/partials/_settings.scss */
 .v-offset-bottom-9 { margin-bottom: 9em; }
 
-/* line 9, ../scss/partials/_settings.scss */
+/* line 8, ../scss/partials/_settings.scss */
 .v-offset-top-10 { margin-top: 10em; }
 
-/* line 10, ../scss/partials/_settings.scss */
+/* line 9, ../scss/partials/_settings.scss */
 .v-offset-bottom-10 { margin-bottom: 10em; }
 
-/* line 9, ../scss/partials/_settings.scss */
+/* line 8, ../scss/partials/_settings.scss */
 .v-offset-top-11 { margin-top: 11em; }
 
-/* line 10, ../scss/partials/_settings.scss */
+/* line 9, ../scss/partials/_settings.scss */
 .v-offset-bottom-11 { margin-bottom: 11em; }
 
-/* line 9, ../scss/partials/_settings.scss */
+/* line 8, ../scss/partials/_settings.scss */
 .v-offset-top-12 { margin-top: 12em; }
 
-/* line 10, ../scss/partials/_settings.scss */
+/* line 9, ../scss/partials/_settings.scss */
 .v-offset-bottom-12 { margin-bottom: 12em; }

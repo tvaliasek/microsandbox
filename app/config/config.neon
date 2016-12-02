@@ -12,3 +12,6 @@ services:
 	- App\Model\Web(%version%, %siteName%, %pages%)
 	- App\RouterFactory(%pages%)
 	router: @App\RouterFactory::createRouter
+	nette.latteFactory:
+		setup:
+			- setAutoRefresh(true)
