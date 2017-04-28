@@ -1,5 +1,5 @@
 {
-  "name": "micropage",
+  "name": "micropage-sandbox",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://tvaliasek@github.com/tvaliasek/imos-rozmaryn.git"
+    "url": "git+https://tvaliasek@github.com/tvaliasek/micropage-sandbox.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tvaliasek/imos-rozmaryn/issues"
+    "url": "https://github.com/tvaliasek/micropage-sandbox/issues"
   },
-  "homepage": "https://github.com/tvaliasek/imos-rozmaryn#readme"
+  "homepage": "https://github.com/tvaliasek/micropage-sandboxreadme",
+  "devDependencies": {
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-uglify": "^2.0.0"
+  }
 }

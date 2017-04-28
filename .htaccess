@@ -1,4 +1,4 @@
 RewriteEngine on
 #RewriteCond %{HTTP_HOST} !^www\.
-#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}.cz/$1 [R=301,L]
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 RewriteRule ^(.*)$ /www/$1 [L,NE]

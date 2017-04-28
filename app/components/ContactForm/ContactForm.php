@@ -109,7 +109,7 @@ class ContactFormControl extends UI\Control {
      * @return $this
      */
     public function addTo($email) {
-        if (!$this->isArray($this->sendTo)) {
+        if (!is_array($this->sendTo)) {
             $this->sendTo = [$this->sendTo];
         }
         $this->sendTo[] = $email;

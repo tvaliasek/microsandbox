@@ -280,11 +280,7 @@ $.nette.ext('validation', {
 		else var analyze = settings.nette;
 		var e = analyze.e;
 
-		var validate = $.extend({
-			keys: true,
-			url: true,
-			form: true
-		}, settings.validate || (function () {
+		var validate = $.extend(this.defaults, settings.validate || (function () {
 			if (!analyze.el.is('[data-ajax-validate]')) return;
 			var attr = analyze.el.data('ajaxValidate');
 			if (attr === false) return {
@@ -319,8 +315,7 @@ $.nette.ext('validation', {
 			if (analyze.isSubmit || analyze.isImage) {
 				analyze.form.get(0)["nette-submittedBy"] = analyze.el.get(0);
 			}
-			var ie = this.ie();
-			if (analyze.form.get(0).onsubmit && analyze.form.get(0).onsubmit((typeof ie !== 'undefined' && ie < 9) ? undefined : e) === false) {
+			if ((analyze.form.get(0).onsubmit ? analyze.form.triggerHandler('submit') : Nette.validateForm(analyze.form.get(0))) === false) {
 				e.stopImmediatePropagation();
 				e.preventDefault();
 				return false;
@@ -340,6 +335,11 @@ $.nette.ext('validation', {
 		return true;
 	}
 }, {
+	defaults: {
+		keys: true,
+		url: true,
+		form: true
+	},
 	explicitNoAjax: false,
 	ie: function (undefined) { // http://james.padolsey.com/javascript/detect-ie-in-js-using-conditional-comments/
 		var v = 3;
@@ -465,7 +465,7 @@ $.nette.ext('snippets', {
 			$el.append(html);
 		} else if (!back && $el.is('[data-ajax-prepend]')) {
 			$el.prepend(html);
-		} else if ($el.html() != html) {
+		} else if ($el.html() != html || /<[^>]*script/.test(html)) {
 			$el.html(html);
 		}
 	},
