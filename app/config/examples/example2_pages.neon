@@ -1,0 +1,231 @@
+parameters:
+	version: '20160916'
+	siteName: 'Micropage Sandbox'
+	products: {
+		1: {
+			'name': 'Kasa do ruky GASTRO',
+			'image': 'gastro/hand.jpg',
+			'price': 12990,
+			'metadesc': 'Provozujete bistro nebo máte rychlé občerstvení přímo na ulici? Potřebujete odolnou kasu, která zvládne EET a my ji pro vás máme. Co všechno dokáže?',
+			'title': 'Pokladní kasa pro EET na tabletu na stánek či do bistra'
+		}
+		2: {
+			'name': 'Pokladna na tabletu GASTRO',
+			'image': 'gastro/tablet.jpg',
+			'price': 19990,
+			'metadesc': 'Stále hledáte pokladnu na EET ve vietnamštině? Pořiďte si naši Pokladnu na tabletu, která je jedničkou v poměru cena/výkon. Součástí je patentovaný stojan.',
+			'title': 'Odolná pokladna na EET do menších restaurací a barů'
+		}
+		3: {
+			'name': 'All-in-one GASTRO',
+			'image': 'gastro/all-in-one.jpg',
+			'price': 39990,
+			'metadesc': 'Vyhlášená restaurace musí mít také vyhlášené služby. Nenechte si EET pošramotit pověst a účtujte snadno a rychle díky pokladnímu systému ALL-IN-ONE.',
+			'title': 'Špičkový pokladní systém s podporou EET pro restaurace'
+		}
+		4: {
+			'name': 'GASTRO PROFI',
+			'image': 'gastro/profi.jpg',
+			'price': 27990,
+			'metadesc': 'Vlastníte oblíbený klub, kam chodí za zábavou spousta lidí? Nenechávejte je stát ve frontě na placení, účtujte rychle a pohodlně s naší dotykovou pokladnou.',
+			'title': 'Dotyková pokladna pro EET do baru nebo klubu'
+		}
+		5: {
+			'name': 'Kasa do ruky OBCHOD',
+			'image': 'shop/hand.jpg',
+			'price': 12990,
+			'metadesc': 'Nemáte na stánku místo na velkou pokladnu? Evidujte tržby na naší pokladně pro EET díky malému tabletu s rychlým pokladním softwarem. Zkuste naši Kasu do ruky.',
+			'title': 'Malá pokladna pro EET na tržnici či do večerky '
+		}
+		6: {
+			'name': 'Pokladna na tabletu OBCHOD',
+			'image': 'shop/tablet.jpg',
+			'price': 19990,
+			'metadesc': 'Pokladna na tabletu je ideálním zařízením pro rychlou a pohodlnou evidenci tržeb. Můžete ji ovládat dotekem a přenést ji, kam zrovna potřebujete.',
+			'title': 'Pokladna na tabletu pro kosmetické a masážní salóny'
+		}
+		7: {
+			'name': 'All-in-one OBCHOD',
+			'image': 'shop/all-in-one.jpg',
+			'price': 49990,
+			'metadesc': 'Zajímá vás, co se nejvíc prodává? Pořiďte si EET pokladní systém ALL-IN-ONE, který vám pomůže nejen s evidencí tržeb, ale i s úspěšným podnikáním.',
+			'title': 'EET pokladní systém s kompletními statistikami prodejů'
+		}
+		8: {
+			'name': 'OBCHOD PROFI',
+			'image': 'shop/profi.jpg',
+			'price': 36990,
+			'metadesc': 'Navštěvovaný obchod s širokým sortimentem chce každý, ale jak bojovat proti EET a následným frontám u pokladny? Dotyková pokladna Profi vám rychle pomůže.',
+			'title': 'Díky dotykové pokladně evidujete tržby rychleji'
+		}
+		9: {
+			'name': 'Mobilní kasa iPOKLADNA',
+			'image': 'accessories/cell-phone.jpg',
+			'price': 4890,
+			'metadesc': 'Pokud máte mobil, nepotřebujete pro své bistro nebo stánek žádnou velkou pokladnu. Stačí vám mobilní kasa pro EET s bluetooth tiskárnou na účtenky.',
+			'title': 'Mobilní kasu pro EET můžete mít na svém mobilu'
+		}
+		10: {
+			'name': 'VINAkasa Obchod standard',
+			'image': 'accessories/vinakasa-standard.jpg',
+			'price': 4990,
+			'metadesc': '',
+			'title': ''
+		}
+		11: {
+			'name': 'VINAkasa Obchod Profi',
+			'image': 'accessories/vinakasa-profi.jpg',
+			'price': 5990,
+			'metadesc': '',
+			'title': ''
+		}
+		12: {
+			'name': 'Příslušenství',
+			'image': 'accessories/accessories.jpg',
+			'price': 0,
+			'metadesc': '',
+			'title': ''
+		}
+	}
+	pages: {
+		1: {
+			'slug': 'kontakty',
+			'title': 'Kontakty',
+			'desc': '',
+			'template': 'contact',
+			'menuItem': 'Kontakty',
+			'navigation': 'main',
+			'menuOrder': 3,
+			'customParams': {}
+		}
+		2: {
+			'slug': 'o-nas',
+			'title': 'O nás',
+			'desc': '',
+			'template': 'about',
+			'menuItem': 'O nás',
+			'navigation': 'main',
+			'menuOrder': 2,
+			'customParams': {}
+		}
+		3: {
+			'slug': 'gastro-kasa-do-ruky',
+			'title': 'Kasa do ruky obchod',
+			'desc': '',
+			'template': 'products/1',
+			'menuItem': '',
+			'navigation': '',
+			'menuOrder': 0,
+			'customParams': { 'type': 1, 'products': %products% }
+		},
+		4: {
+			'slug': 'gastro-pokladna-na-tabletu',
+			'title': 'Pokladna na tabletu obchod',
+			'desc': '',
+			'template': 'products/2',
+			'menuItem': '',
+			'navigation': '',
+			'menuOrder': 0,
+			'customParams': { 'type': 2, 'products': %products% }
+		},
+		5: {
+			'slug': 'gastro-pokladni-system-all-in-one',
+			'title': 'Pokladní systém all-in-one gastro',
+			'desc': '',
+			'template': 'products/3',
+			'menuItem': '',
+			'navigation': '',
+			'menuOrder': 0,
+			'customParams': { 'type': 3, 'products': %products% }
+		},
+		6: {
+			'slug': 'gastro-pokladni-system-profi',
+			'title': 'Pokladní systém gastro profi ',
+			'desc': '',
+			'template': 'products/4',
+			'menuItem': '',
+			'navigation': '',
+			'menuOrder': 0,
+			'customParams': { 'type': 4, 'products': %products% }
+		},
+		7: {
+			'slug': 'obchod-kasa-do-ruky',
+			'title': 'Kasa do ruky obchod',
+			'desc': '',
+			'template': 'products/5',
+			'menuItem': '',
+			'navigation': '',
+			'menuOrder': 0,
+			'customParams': { 'type': 5, 'products': %products% }
+		},
+		8: {
+			'slug': 'obchod-pokladna-na-tabletu',
+			'title': 'Pokladna na tabletu obchod',
+			'desc': '',
+			'template': 'products/6',
+			'menuItem': '',
+			'navigation': '',
+			'menuOrder': 0,
+			'customParams': { 'type': 6, 'products': %products% }
+		},
+		9: {
+			'slug': 'obchod-pokladni-system-all-in-one',
+			'title': 'Pokladní systém all-in-one obchod',
+			'desc': '',
+			'template': 'products/7',
+			'menuItem': '',
+			'navigation': '',
+			'menuOrder': 0,
+			'customParams': { 'type': 7, 'products': %products% }
+		},
+		10: {
+			'slug': 'obchod-pokladni-system-profi',
+			'title': 'Pokladní systém obchod profi',
+			'desc': '',
+			'template': 'products/8',
+			'menuItem': '',
+			'navigation': '',
+			'menuOrder': 0,
+			'customParams': { 'type': 8, 'products': %products% }
+		},
+		11: {
+			'slug': 'mobilni-kasa-ipokladna',
+			'title': 'Mobilní kasa iPOKLADNA',
+			'desc': '',
+			'template': 'products/9',
+			'menuItem': '',
+			'navigation': '',
+			'menuOrder': 0,
+			'customParams': { 'type': 9, 'products': %products% }
+		},
+		12: {
+			'slug': 'vinakasa-obchod-standard',
+			'title': 'VINAkasa Obchod standard ',
+			'desc': '',
+			'template': 'products/10',
+			'menuItem': '',
+			'navigation': '',
+			'menuOrder': 0,
+			'customParams': { 'type': 10, 'products': %products% }
+		},
+		13: {
+			'slug': 'vinakasa-obchod-profi',
+			'title': 'VINAkasa Obchod Profi',
+			'desc': '',
+			'template': 'products/11',
+			'menuItem': '',
+			'navigation': '',
+			'menuOrder': 0,
+			'customParams': { 'type': 11, 'products': %products% }
+		},
+		14: {
+			'slug': 'sw-a-prislusenstvi',
+			'title': 'Software a příslušenství',
+			'desc': '',
+			'template': 'accessories',
+			'menuItem': '',
+			'navigation': '',
+			'menuOrder': 4,
+			'customParams': { 'type': 12, 'products': %products% }
+		}
+	}

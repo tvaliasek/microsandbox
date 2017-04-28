@@ -1,0 +1,35 @@
+{block title}{$pageData['title']}{/block}
+{block desc}{$pageData['desc']}{/block}
+
+{block content}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>{$pageData['title']}</h1>
+            <hr/>
+            <p>some content lipsum etc :)</p>
+        </div>
+    </div>
+        
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>Sample gallery</h3>
+            <div class="gallery" n:if="isset($gallery) && !empty($gallery)">
+                <a n:foreach="$gallery as $thumb=>$image" href="{$image}" target="_self" data-jslghtbx="{$image}" data-jslghtbx-group="gallery" class="gallery-item" title="{$image|replace:\App\Model\Web::GALLERY_URI:''}"><img src="{$thumb}" alt="{$image|replace:\App\Model\Web::GALLERY_URI:''}" class="gallery-thumb"/></a>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+
+{block scripts}
+{include parent}
+<script type="text/javascript" src="/js/jsOnlyLightbox/lightbox.min.js"></script>
+<script type="text/javascript">
+    var lightbox = new Lightbox();
+    lightbox.load({
+        captions: false,
+        preload: false
+    });
+</script>
+{/block}

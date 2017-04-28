@@ -1,0 +1,18 @@
+parameters:
+	contact:
+		saveTo: 'file'
+		saveTarget: '/../../../log'
+		mailFrom : 'admin@cmcode.cz'
+		subject : 'New contact form submission'
+		sendTo : 'admin@cmcode.cz'
+		emailTemplate: '/emailTemplate.latte'
+		bootstrapRender: true
+		submitText: 'Send'
+		submitOnClick: null
+		ajax: false
+		successText: 'Your message has been sent.'
+		errorText: 'Some error occured, try again later.'
+
+services:
+	- App\Components\ContactFormControlSettings(%contact.saveTo%, %contact.saveTarget%, %contact.mailFrom%, %contact.subject%, %contact.sendTo%, %contact.emailTemplate%, %contact.bootstrapRender%, %contact.submitText%, %contact.submitOnClick%, %contact.ajax%, %contact.successText%, %contact.errorText%)
+	- App\Components\IContactFormControlFactory

@@ -12,7 +12,3 @@ services:
 	- App\Model\Web(%version%, %siteName%, %pages%)
 	- App\RouterFactory(%pages%)
 	router: @App\RouterFactory::createRouter
-
-latte:
-	macros:
-		- \Tvaliasek\IconMacros\IconMacro

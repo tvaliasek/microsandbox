@@ -10,9 +10,11 @@
         <script type="text/javascript">
             function loadCSS(a,d,f,g){ var b=window.document.createElement("link");var c=d||window.document.getElementsByTagName("script")[0];var e=window.document.styleSheets;b.rel="stylesheet";b.href=a;b.media="only x";if(g){ b.onload=g }c.parentNode.insertBefore(b,c);b.onloadcssdefined=function(h){ var k;for(var j=0;j<e.length;j++){ if(e[j].href&&e[j].href===b.href){ k=true } }if(k){ h() }else{ setTimeout(function(){ b.onloadcssdefined(h) }) } };b.onloadcssdefined(function(){ b.media=f||"all" });return b };
             loadCSS("/css/non-crit{if !$develMode}.min{/if}.css{$version|noescape}");
+            loadCSS("/css/toastr.min.css");
         </script>
         <noscript>
             <link href="{$baseUri}/css/non-crit{if !$develMode}.min{/if}.css{$version|noescape}" rel="stylesheet" />
+            <link href="{$baseUri}/css/toastr.min.css" rel="stylesheet" />
         </noscript>
        
         {block head}{/block}
@@ -20,6 +22,30 @@
     <body{if $onHomepage} class="on-homepage"{/if}>
         <div class="main-flex">
             <header class="main-header">
+                
+                {* example navigation *}
+                {if isset($mainLinks) && !empty($mainLinks)}
+                    <nav class="navbar navbar-default navbar-static-top">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <a href="{$baseUri}" class="navbar-brand">{$siteName}</a>
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav" id="mainNavigation">
+                                    <li n:foreach="$mainLinks as $pageId=>$data" class="navbar-item">
+                                        <a class="navbar-item-link" n:href="default $pageId" target="_self" title="{$data['menuItem']}">{$data['menuItem']}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                {/if}
                 
             </header>
             
@@ -33,9 +59,11 @@
                 
             </footer>
         </div>
-   
-        <script type="text/javascript" src="/js/jquery-2.2.4.min.js{$version|noescape}"></script>
+        <ul id="flashContainer">
+            <li n:foreach="$flashes as $flash" data-flash-type="{$flash->type}">{$flash->message}</li>
+        </ul>
         <script type="text/javascript" src="/js/front-libs.min.js{$version|noescape}"></script>
+        <script type="text/javascript" src="/js/bootstrap/bootstrap.min.js{$version|noescape}"></script>
         <script type="text/javascript" src="/js/front{if !$develMode}.min{/if}.js{$version|noescape}"></script>
         {block scripts}{/block}
     </body>

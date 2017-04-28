@@ -1,5 +1,6 @@
 parameters:
 	version: '20160916'
+	siteName: 'Micropage Sandbox'
 	pages: {
 		1: {
 			'slug': 'poloha', 

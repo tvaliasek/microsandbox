@@ -1,0 +1,24 @@
+{block title}{$pageData['title']}{/block}
+{block desc}{$pageData['desc']}{/block}
+
+{block content}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>{$pageData['title']}</h1>
+            <hr/>
+            <p>some content lipsum etc :)</p>
+        </div>
+    </div>
+        
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>Passed custom parameters</h3>
+            <ul>
+                <li><strong>Custom parameter content ($sampleCustomParameter):</strong> {$sampleCustomParameter}</li>
+                <li><strong>Custom parameter content ($anotherParameter):</strong> {$anotherParameter}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{/block}

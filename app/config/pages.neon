@@ -2,5 +2,37 @@ parameters:
 	version: '20160916'
 	siteName: 'Micropage Sandbox'
 	pages: {
-		
+		1: {
+			'slug': 'test-page', 
+			'title': 'Test page', 
+			'desc': 'This is microsandbox test page', 
+			'template': 'test-page', 
+			'menuItem': 'Link to test page', 
+			'navigation': 'main', 
+			'menuOrder': 1,
+			'customParams': { 
+				'sampleCustomParameter': 'This is my content :)',
+				'anotherParameter': 'Any content can be passed'
+			}
+		},
+		2: {
+			'slug': 'contact',
+			'title': 'Contact form',
+			'desc': 'This is microsandbox test page with contact form',
+			'template': 'contact',
+			'menuItem': 'Contact form',
+			'navigation': 'main',
+			'menuOrder': 2,
+			'customParams': {}
+		},
+		3: {
+			'slug': 'simple-gallery',
+			'title': 'Very simple gallery',
+			'desc': '',
+			'template': 'gallery',
+			'menuItem': 'Gallery',
+			'navigation': 'main',
+			'menuOrder': 3,
+			'customParams': {'gallery': \App\Model\Web::getGalleryImages()}
+		}
 	}

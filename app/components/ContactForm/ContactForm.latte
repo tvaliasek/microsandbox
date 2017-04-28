@@ -1,0 +1,7 @@
+<div class="contact-form-component" n:snippet="snpcContactForm">
+    {ifset $message}
+        <p class="text-center alert alert-warning">{$message}</p>
+    {else}
+        {control contactControlForm}
+    {/ifset}
+</div>

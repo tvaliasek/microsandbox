@@ -27,7 +27,7 @@ class RouterFactory
                 $router = new RouteList;
                 $router[] = new Route('sitemap[.xml]', 'Sitemap:default');
                 $router[] = new Route('robots[.txt]', 'Sitemap:robots');
-                $router[] = new Route('[parkovani/]<id>', [
+                $router[] = new Route('<id>', [
                     'presenter'=>'Web',
                     'action'=>'default',
                     'id'=>[

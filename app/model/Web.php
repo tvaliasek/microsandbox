@@ -13,7 +13,7 @@ class Web extends Nette\Object {
     const MAIN_NAVIGATION = 'main';
     const GALLERY_PATH = '/../../www/img/gallery/';
     const GALLERY_URI = '/img/gallery/';
-    
+
     public function __construct($version, $siteName, $pageConfig) {
         $this->version = $version;
         $this->pageConfig = $pageConfig;
@@ -27,88 +27,133 @@ class Web extends Nette\Object {
     public function getVersion() {
         return $this->version;
     }
-    
+
     /**
      * Gets site name from configuration
      * @return string
      */
-    public function getSiteName(){
+    public function getSiteName() {
         return $this->siteName;
     }
-    
+
     /**
      * Get sorted pages for navigation
      * @param string $navigationName
      * @return array
      */
-    public function getNavigation($navigationName){
+    public function getNavigation($navigationName) {
         $result = [];
         $sort = [];
         $temp = [];
-        foreach($this->pageConfig as $id=>$page){
-            if($page['navigation'] == $navigationName){
+        foreach ($this->pageConfig as $id => $page) {
+            if ($page['navigation'] == $navigationName) {
                 $temp[$id] = $page;
                 $sort[$id] = $page['menuOrder'];
             }
         }
-        if(!empty($temp)){
+        if (!empty($temp)) {
             asort($sort);
-            foreach($sort as $id=>$pageOrder){
+            foreach ($sort as $id => $pageOrder) {
                 $result[$id] = $temp[$id];
             }
         }
         return $result;
     }
-    
-    public function pageExists($pageId){
+
+    /**
+     * Exists page in config?
+     * @param int $pageId
+     * @return bool
+     */
+    public function pageExists($pageId) {
         return key_exists($pageId, $this->pageConfig);
     }
-    
-    public function getPageTemplate($pageId){
-        if($this->pageExists($pageId) && file_exists(__DIR__.'/../presenters/templates/Web/pages/'. $this->pageConfig[$pageId]['template'].'.latte')){
-            return __DIR__.'/../presenters/templates/Web/pages/'. $this->pageConfig[$pageId]['template'].'.latte';
+
+    /**
+     * Gets page template file path
+     * @param int $pageId
+     * @return string
+     * @throws Nette\Application\BadRequestException
+     */
+    public function getPageTemplate($pageId) {
+        if ($this->pageExists($pageId) && file_exists(__DIR__ . '/../presenters/templates/Web/pages/' . $this->pageConfig[$pageId]['template'] . '.latte')) {
+            return __DIR__ . '/../presenters/templates/Web/pages/' . $this->pageConfig[$pageId]['template'] . '.latte';
         } else {
             throw new Nette\Application\BadRequestException('Non-existent page template.');
         }
     }
-    
-    public function getCustomParams($pageId){
-        if($this->pageExists($pageId)){
+
+    /**
+     * Returns array with page custom parameters defined in config
+     * @param int $pageId
+     * @return array
+     */
+    public function getCustomParams($pageId) {
+        if ($this->pageExists($pageId)) {
             return $this->pageConfig[$pageId]['customParams'];
         }
         return [];
     }
-    
-    public static function getGalleryImages(){
-        $images = \Nette\Utils\Finder::findFiles('*.jpg')->from(__DIR__.self::GALLERY_PATH.'thumbs/');
+
+    /**
+     * Get array of thumb=>image in gallery folder
+     * Scans folder for jpegs
+     * @return array
+     */
+    public static function getGalleryImages() {
+        $images = \Nette\Utils\Finder::findFiles('*.jpg')->from(__DIR__ . self::GALLERY_PATH . 'thumbs/');
         $result = [];
-        if(!empty($images)){
-            foreach($images as $spl){
+        if (!empty($images)) {
+            foreach ($images as $spl) {
                 $filename = $spl->getBasename();
-                if(file_exists(__DIR__.self::GALLERY_PATH.$filename)){
-                    $result[self::GALLERY_URI.'thumbs/'.$filename] = self::GALLERY_URI.$filename;
+                if (file_exists(__DIR__ . self::GALLERY_PATH . $filename)) {
+                    $result[self::GALLERY_URI . 'thumbs/' . $filename] = self::GALLERY_URI . $filename;
                 }
             }
         }
         return $result;
     }
-    
-    public function getMenuText($pageId){
-        if($this->pageExists($pageId)){
+
+    /**
+     * Get menu item text
+     * @param int $pageId
+     * @return string || bool false
+     */
+    public function getMenuText($pageId) {
+        if ($this->pageExists($pageId)) {
             return $this->pageConfig[$pageId]['menuItem'];
         }
         return false;
     }
-    
-    public static function getPageSlugs(array $pageConfig){
+
+    /**
+     * Returns array of available slugs
+     * @param array $pageConfig
+     * @return array
+     */
+    public static function getPageSlugs(array $pageConfig) {
         $result = [];
-        foreach($pageConfig as $pageId=>$pageData){
+        foreach ($pageConfig as $pageId => $pageData) {
             $result[$pageId] = $pageData['slug'];
         }
         return $result;
     }
-    
-    public function getPageIds(){
+
+    /**
+     * Return array of page ids
+     * @return array
+     */
+    public function getPageIds() {
         return array_keys($this->pageConfig);
     }
+
+    /**
+     * Get whole page config section as array
+     * @param int $pageId
+     * @return array
+     */
+    public function getPageData($pageId) {
+        return (key_exists($pageId, $this->pageConfig)) ? $this->pageConfig[$pageId] : [];
+    }
+
 }
